@@ -1,0 +1,13 @@
+.contaner{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(13, 2, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(58, 31, 62);
+}
