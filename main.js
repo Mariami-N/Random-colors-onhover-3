@@ -13,27 +13,18 @@ for (let i = 0; i < 500; i++) {
   square.style.height = '30px';
   square.style.backgroundColor = "rgb(24, 14, 30)";
   square.style.margin = '3px';
+
+
+  let colors = () => {
+  let randomColor = Math.floor(Math.random()*16777215).toString(16);
+  square.style.backgroundColor = "#" + randomColor;
+  }
+
   square.addEventListener("mouseover", function(){
-  let randomColor = getRandomColor();
-  square.style.backgroundColor = randomColor;
+  colors();
   })
-  
+
   square.addEventListener('mouseout', function() {
-    square.style.backgroundColor = "rgb(24, 14, 30)";
-    square.style.transition="all 0.8s"
-    square.style.color=boxShadow})
-  }
-
-  
-
-  function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
-  // let randomColor = Math.floor(Math.random()*16777215).toString(16);
-  // square.classList.toggle("colors")
+  square.style.backgroundColor = "rgb(24, 14, 30)";
+  square.style.transition="all 1s"
+  })}
